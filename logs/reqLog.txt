@@ -342,3 +342,5 @@
 2023/07/30	10:45:35	704c1633-b252-4b61-b9af-347e6ef19aec	POST	undefined	/auth
 2023/07/30	10:46:22	86b8391f-151d-4925-b81d-4ff9d527e542	POST	undefined	/auth
 2023/07/30	10:48:06	ca7c6be2-970d-4df4-b2b6-d4cdeec07250	POST	undefined	/auth
+2023/07/30	10:55:27	b15be2a5-c62e-4ef7-bf5b-a1029dfc4eb4	POST	undefined	/logout
+2023/07/30	10:55:49	62a5e5ed-5cb9-439a-93a7-fbd78889c82d	GET	undefined	/logout
