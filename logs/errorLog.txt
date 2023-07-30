@@ -1,0 +1,10 @@
+2023/07/27	17:11:51	2bad67cd-c564-4845-82ee-f147147cdf32	TypeError	fsPromises.readFle is not a function
+2023/07/27	18:35:08	3a384f31-4835-4da0-92d9-85152d2053c4	Error: Error
+2023/07/27	18:36:30	f0341532-96f6-4850-9fc1-251e108f0bc8	Error: Not allowed by CORS
+2023/07/28	11:14:58	34bcfb84-ef4d-4ffa-ae57-bf8b265d59c5	ReferenceError: founderUser is not defined
+2023/07/28	11:33:00	23c9fc95-d1c3-4099-a005-47302687c074	ReferenceError: foundUser is not defined
+2023/07/28	11:34:07	80974047-257a-4d94-a4f3-c10cb42e7130	SyntaxError: Expected double-quoted property name in JSON at position 49
+2023/07/28	11:34:52	2cd24995-49d3-45ec-84ea-c27b285e391b	SyntaxError: Expected double-quoted property name in JSON at position 49
+2023/07/28	12:18:13	20b7a848-7339-47f1-9da4-9f749b5eddce	SyntaxError: Expected ',' or '}' after property value in JSON at position 49
+2023/07/29	11:33:48	8d9cb1b4-fee7-44d5-a592-c16400782328	ReferenceError: ro is not defined
+2023/07/29	11:40:27	8fe931a8-f0c8-48dd-bc9c-1d69e0e3e444	ReferenceError: ro is not defined

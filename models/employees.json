@@ -1,0 +1,29 @@
+[{
+    "id": 1,
+    "first_name": "Carolan",
+    "last_name": "Crayden",
+    "email": "ccrayden0@columbia.edu",
+    "gender": "Female",
+    "ip_address": "255.105.126.100"
+  }, {
+    "id": 2,
+    "first_name": "Mortie",
+    "last_name": "Misson",
+    "email": "mmisson1@google.es",
+    "gender": "Male",
+    "ip_address": "248.157.110.64"
+  }, {
+    "id": 3,
+    "first_name": "Taryn",
+    "last_name": "Leckie",
+    "email": "tleckie2@ox.ac.uk",
+    "gender": "Bigender",
+    "ip_address": "155.124.114.171"
+  }, {
+    "id": 4,
+    "first_name": "Delphine",
+    "last_name": "Coopman",
+    "email": "dcoopman3@wix.com",
+    "gender": "Female",
+    "ip_address": "13.218.138.200"
+  }]
