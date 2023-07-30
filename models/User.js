@@ -9,7 +9,7 @@ const userSchema = new Schema({
         Editor: Number,
         Admin: Number
     },
-    pwd:{type:String,require:true},
+    password:{type:String,require:true},
     refreshToken:{type:String, default:""}
 })
 
