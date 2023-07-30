@@ -1,11 +1,5 @@
-const usersDb = {
-	users: require("../models/users.json"),
-	setUsers: function (data) {
-		this.users = data;
-	},
-};
-const fsPromises = require("fs").promises;
-const path = require("path");
+const User = require("../models/User");
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -19,7 +13,7 @@ const handleLogin = async (req, res) => {
 			.json({ message: "Username and password is required" })}
 
 	//check user exists
-	const foundUser = usersDb.users.find((u) => u.username === user);
+	const foundUser = await User.findOne({username: user});
 	if (!foundUser) return res.sendStatus(401);
 
 	// evaluate password
@@ -42,20 +36,9 @@ const handleLogin = async (req, res) => {
 			process.env.REFRESH_TOKEN_SECRET,
 			{ expiresIn: "1d" }
 		);
-
-		const otherUsers = usersDb.users.filter(
-			(u) => u.username !== foundUser.username
-		);
-
-		const currentUser = { ...foundUser, refreshToken };
-		usersDb.setUsers([...otherUsers, currentUser]);
-
-		await fsPromises.writeFile(
-			path.join(__dirname, "..", "models", "users.json"),
-			JSON.stringify(usersDb.users)
-		);
-       
-		res.cookie("jwt", refreshToken,{httpOnly:true, sameSite:'None', maxAge:24*60*60*1000});// 1 day max age
+		//update the refreshToken in database
+	    const result = await User.updateOne({username : foundUser.username},{refreshToken: refreshToken });
+		res.cookie("jwt", refreshToken,{httpOnly:true, sameSite:'None', /*secure:true, */ maxAge:24*60*60*1000});// 1 day max age
 		res.json({accessToken});
 
 	} else {
