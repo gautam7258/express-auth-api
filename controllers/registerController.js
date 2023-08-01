@@ -22,7 +22,7 @@ const handleRegister = async (req, res) => {
 			password: hashedPassword,
 		});
 		console.log(newUser)
-		res.status(201).json({ message: `New user Created`, newUser });
+		res.status(201).json({ message: `New user ${user} is Created!`});
 	} catch (error) {
 		res.status(500).json({ message: error.message });
 	}

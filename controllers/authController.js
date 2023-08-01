@@ -37,7 +37,12 @@ const handleLogin = async (req, res) => {
 			{ expiresIn: "1d" }
 		);
 		//update the refreshToken in database
-	    const result = await User.updateOne({username : foundUser.username},{refreshToken: refreshToken });
+	    //const result = await User.updateOne({username : foundUser.username},{refreshToken });
+		
+		foundUser.refreshToken = refreshToken;
+		const result = await foundUser.save();
+		console.log(result);
+		
 		res.cookie("jwt", refreshToken,{httpOnly:true, sameSite:'None', /*secure:true, */ maxAge:24*60*60*1000});// 1 day max age
 		res.json({accessToken});
 
