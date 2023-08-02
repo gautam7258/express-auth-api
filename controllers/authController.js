@@ -14,7 +14,7 @@ const handleLogin = async (req, res) => {
 
 	//check user exists
 	const foundUser = await User.findOne({username: user});
-	if (!foundUser) return res.sendStatus(401);
+	if (!foundUser) return res.status(401).json({message:'User not Found'});
 
 	// evaluate password
 	const match = await bcrypt.compare(pwd, foundUser.password);
@@ -47,7 +47,7 @@ const handleLogin = async (req, res) => {
 		res.json({accessToken});
 
 	} else {
-		res.sendStatus(401);
+		res.status(401).json({message: "Username and Password does not match"});
 	}
 };
 
