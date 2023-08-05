@@ -37,8 +37,7 @@ const handleLogin = async (req, res) => {
 			{ expiresIn: "1d" }
 		);
 		//update the refreshToken in database
-	    //const result = await User.updateOne({username : foundUser.username},{refreshToken });
-		
+	
 		foundUser.refreshToken = refreshToken;
 		const result = await foundUser.save();
 		console.log(result);
